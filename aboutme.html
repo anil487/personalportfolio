@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="./img/a1.jpg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Hello, I'm Anil Kumar Mahato, a passionate Junior React Developer with over 1 year of hands-on experience in crafting web applications. 
+                        I thrive on turning ideas into interactive and user-friendly experiences.
+                    </p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('Achievements')">Achievements</p>
+                        <p class="tab-links"onclick="opentab('Education')">Education</p>
+                        <p class="tab-links"onclick="opentab('Connect')">Connect</p> 
+                    </div>
+                    <div class="tab-content active-tab" id="skills">
+                        <ul>
+                            <li><span>Front-end Development</span><br>Proficient in React, HTML, CSS, and JavaScript</li>
+                            <li><span>Version Control</span><br>Experience with Git for efficient and collaborative development</li>
+                            <li><span>Problem Solving</span><br>A knack for tackling challenges and finding innovative solutions</li>
+                            <li><span>Continuous Learning</span><br>Committed to staying up-to-date with the latest technologies and industry trends</li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="achievements">
+                        <ul>
+                            <li><span>Achievements</span><br>During my career, I've contributed to the success of projects by delivering clean, efficient code and collaborating effectively with team members. I take pride in my ability to adapt to new technologies swiftly and my dedication to producing high-quality results</li> 
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="education">
+                        <ul>
+                            <li><span>Education</span><br>Bachelor in Computer Application (BCA)
+                                [Tribhuwan University]
+                                Current: 7th Semester
+
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="tab-content" id="connect"> 
+                        <ul>
+                            <li><span>Let's Connect</span><br>I am open to new opportunities, collaborations, and discussions. 
+                                Feel free to reach out if you share a passion for web development, have exciting projects in mind,
+                                 or just want to connect<br>[Contact Me:9823524880] | [ GitHub:"https://github.com/anil487"]|<br> [LinkedIn:linkedin.com/in/anil-mahato-029175229]</li> 
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tab-links");
+        var tabcontents=document.getElementsByClassName("tab-content"); 
+        function opentab(tabname) {
+    for (tablink of tablinks) {
+        tablink.classList.remove("active-link");
+    }
+    for (tabcontent of tabcontents) {
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname.toLowerCase()).classList.add("active-tab");
+}
+    </script>
+
+</body>
+</html>

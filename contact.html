@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <script src="https://kit.fontawesome.com/505eca164e.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="contact">
+        <div class="row">
+            <div class="contact-info">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fa-solid fa-envelope"></i>anilmahatoanil95659@gmail.com</p>
+                <p><i class="fa-solid fa-square-phone"></i>+9779823524880</p>
+                <div class="social-media">
+                    <a href="https://web.telegram.org/k/"><i class="fa-brands fa-telegram"></i></a>
+                    <a href="https://web.whatsapp.com/"><i class="fa-brands fa-whatsapp"></i></a>
+                    <a href="https://www.linkedin.com/feed/"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://www.facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                </div>
+                <a href="./anilresume/Anil RESUME(intern).pdf" download class="button1">Download Resume</a>
+            </div>
+            <form class="contact-form" id="submit-to-google-sheet">
+                <div class="form">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="number" name="contactNo" placeholder="Enter your contactNo" required>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                    <textarea name="query" rows="7" placeholder="Drop your Query here"></textarea>
+                    <button type="submit" class="button1">Submit</button>
+                </div>
+                <span id="msg"></span>
+            </form> 
+        </div> 
+    </div>
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwSMRAf0q58rYO-8ODn1uBjLWtY_oBcDDDZt-sZOkKRyFbdot48tbwwAxqeg3RGkZg/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg= document.getElementById("msg")
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response =>{
+            msg.innerHTML="message delivered!"
+            setTimeout(function(){
+                msg.innerHTML= ""
+            },6000)
+            form.reset();
+         } )
+            .catch(error => console.error('Error!', error.message))
+        })
+    </script>
+</body>
+</html>

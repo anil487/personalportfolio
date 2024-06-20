@@ -1,0 +1,90 @@
+/* General styles */
+.row {
+    display: flex;
+}
+
+.contact-info {
+    flex-basis: 30%;
+}
+
+.contact-form {
+    flex-basis:65%;
+}
+
+.contact-info p {
+    margin-top: 30px;
+}
+
+.contact-info p i {
+    color: blue;
+    margin-right: 1em;
+    font-size: 30px;
+}
+
+.social-media {
+    margin-top: 35px;
+}
+
+/* Social media icons */
+.social-media a {
+    text-decoration: none;
+    font-size: 35px;
+    display: inline-block;
+    margin-right: 20px;
+    color: skyblue;
+    transition: transform 0.5s;
+}
+
+.social-media a:hover {
+    color: blue;
+    transform: translateY(-8px);
+}
+
+/* Button styling */
+.button1 {
+    margin-top: 1em;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: green;
+    color: white;
+    text-decoration: none;
+    border: 1px solid darkgreen;
+    border-radius: 5px;
+}
+
+/* Form styling */
+.contact-form .form {
+    width: 100%;
+    margin-left:5px;
+}
+
+.contact-form .form input,
+.contact-form .form textarea {
+    width: 100%;
+    padding: 16px;
+    border: 1px solid #333;
+    margin: 10px 0;
+    background-color: #262626;
+    outline: 0;
+    color: white;
+    font-size: 15px;
+    border-radius: 5px;
+}
+
+.contact-form .form textarea {
+    resize: vertical;
+}
+
+.contact-form .form button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius:6px;
+    cursor: pointer;
+}
+#msg{
+    color: blueviolet;
+    margin-top:5px;
+    display: block;
+}
